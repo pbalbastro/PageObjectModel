@@ -1,7 +1,7 @@
 package com.saucedemo.test;
 
+import com.crm.qa.pages.HomePage;
 import com.saucedemo.base.Base;
-import com.saucedemo.pages.HomePage;
 import com.saucedemo.pages.LoginPage;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -23,8 +23,7 @@ public class LoginTest extends Base {
 
     @Test()
     public void loginTest() {
-//        homePage = loginPage.login("standard_user", "secret_sauce");
-        homePage = loginPage.login(prop.getProperty("standard_user"), prop.getProperty("secret_sauce"));
+        homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
     }
 
     @AfterMethod
